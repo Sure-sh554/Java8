@@ -49,8 +49,10 @@ public class MethodReferenceDemo {
         //method of an arbitrary object of a specific type
 
         Function<String,String> stringFunction=(String input)-> input.toLowerCase();
-
-
+        System.out.println(stringFunction.apply("Java Guides"));
+        //Using method reference
+        Function<String,String> stringFunctionRef=String::toLowerCase;
+        System.out.println(stringFunctionRef.apply("Java Guides"));
 
 
     }
